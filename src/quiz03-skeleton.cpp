@@ -16,7 +16,7 @@ class Employee{
             cout << "Employee Name: " << name << endl;
             cout << "Employee Salary: " << salary << endl;
         }
-        static void showTotalEmployees(){
+        static int showTotalEmployees(){
             return employeeCount;
         }
         virtual ~Employee() {
@@ -45,23 +45,23 @@ int main() {
     int n;
     cout<<"enter number of employees"<<endl;
     cin>>n;
-    string t, n;
-    int s;
+    string t, name;
+    int s,i;
     for (i=0; i<n; i++){
         cout<<"staff or faculty?";
         cin>>t;
         cout<<"name:";
-        cin>>n;
+        cin>>name;
         cout<<"salary:";
         cin>>s;
-    }
+    };
     cout<<"input end"<<endl;
     for (i=0; i<n; i++){
         if (t=="staff"){
-            Staff::displayInfo(n, s){}
-        }elseif (t=="Faculty")[
-            Faculty::displayInfo(n, s){}
-        ]
+            Staff::displayInfo(){}
+        }else if (t=="Faculty"){
+            Faculty::displayInfo(){}
+        }
     }
     cout<<"Total Employees Created:"<<Employee::showTotalEmployees()<<endl;
     return 0;
